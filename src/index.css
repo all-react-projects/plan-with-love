@@ -16,7 +16,7 @@ code {
   /* align-items: center; */
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 1300px;
+  max-width: 1000px;
   margin:0 auto;
 }
 
@@ -50,4 +50,9 @@ width: 270px;
 
 .readmore{
 color:blue
+}
+
+.refresh{
+  text-align: center;
+  margin-top: 300px;
 }

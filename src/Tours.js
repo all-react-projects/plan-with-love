@@ -10,7 +10,7 @@ export default function Tours({tours, removeTour}) {
         <div className='cards'>
             {
               tours.map((tour) => {
-                  return <Card {...tour} removeTour={removeTour}></Card> //passing tour object copy/cloning
+                  return <Card key={tour.id} {...tour} removeTour={removeTour}></Card> //passing tour object copy/cloning
               })
             }
       </div>

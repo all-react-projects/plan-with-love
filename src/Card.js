@@ -13,16 +13,16 @@ function Card({id, image, info, price, name, removeTour}) {
     
     return (
         <div className=''>
-            <div class="card" style={{width: "18rem"}}>
-                <img src={image} class="card-img-top" alt="..."/>
-                    <div class="card-body">
-                    <h6 class="card-title" style={{color:"green"}}>Rs. {price}</h6>
-                    <h5 class="card-title">{name}</h5>
-                    <p class="card-text">
+            <div className="card" style={{width: "18rem"}}>
+                <img src={image} className="card-img-top" alt="..."/>
+                    <div className="card-body">
+                    <h6 className="card-title" style={{color:"green"}}>Rs. {price}</h6>
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">
                         {desc}
                         <span className='readmore' onClick={readmoreHandler}>{readmore ? 'show less': 'read more'}</span>
                     </p>
-                    <a class="btn btn-outline-primary" onClick={()=>removeTour(id)}>Not Interested</a>
+                    <a className="btn btn-outline-danger" onClick={()=>removeTour(id)}>Not Interested</a>
                 </div>
             </div>
         </div>
