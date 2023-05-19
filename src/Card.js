@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
-
 function Card({id, image, info, price, name, removeTour}) {
 
     let [readmore, setReadMore]=useState(false);
-    let desc=`${info.substring(0,150)}...`;
+
+    //if readmore=true then show full length desc (info) if readmore=false show only limited desc
+    let desc= readmore ? info : `${info.substring(0,150)}...`;
 
     let readmoreHandler=()=>{
         setReadMore(!readmore);
