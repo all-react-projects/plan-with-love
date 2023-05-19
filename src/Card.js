@@ -1,30 +1,30 @@
 import React, { useState } from 'react'
 
 
-function Card({id, image, info, price, name}) {
+function Card({id, image, info, price, name, removeTour}) {
 
     let [readmore, setReadMore]=useState(false);
     let desc=`${info.substring(0,150)}...`;
 
-    let readmoreHandler = () =>{
+    let readmoreHandler=()=>{
         setReadMore(!readmore);
     }
-
-  return (
-    <div className=''>
-        <div class="card" style={{width: "18rem"}}>
-            <img src={image} class="card-img-top" alt="..."/>
-                <div class="card-body">
-                <h5 class="card-title">{name}</h5>
-                <h6 class="card-title">Rs. {price}</h6>
-                <p class="card-text">
-                    {desc}
-                    <span className='readmore' onClick={readmoreHandler}>{readmore ? 'show less': 'read more'}</span>
-                </p>
-                <a href="/" class="btn btn-primary">Go somewhere</a>
+    
+    return (
+        <div className=''>
+            <div class="card" style={{width: "18rem"}}>
+                <img src={image} class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                    <h6 class="card-title" style={{color:"green"}}>Rs. {price}</h6>
+                    <h5 class="card-title">{name}</h5>
+                    <p class="card-text">
+                        {desc}
+                        <span className='readmore' onClick={readmoreHandler}>{readmore ? 'show less': 'read more'}</span>
+                    </p>
+                    <a class="btn btn-outline-primary" onClick={()=>removeTour(id)}>Not Interested</a>
+                </div>
             </div>
         </div>
-    </div>
-  )
+    )
 }
 export default Card
